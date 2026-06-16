@@ -204,8 +204,10 @@ textarea {
   background-image:
     linear-gradient(180deg, rgba(6, 21, 35, 0.04), rgba(6, 21, 35, 0.16)),
     url("/images/products/canopy-2-cars.jpg");
-  background-position: 50% 46%;
-  background-size: cover;
+  background-color: #061523;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .bg-gate,
