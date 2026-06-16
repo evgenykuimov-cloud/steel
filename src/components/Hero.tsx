@@ -58,7 +58,7 @@ export function Hero() {
           </div>
 
           <div className="mt-9 flex max-w-xl flex-col gap-3 sm:flex-row">
-            <Button href="#lead-form" className="w-full sm:w-auto">
+            <Button href="/#lead-form" className="w-full sm:w-auto">
               Рассчитать проект
             </Button>
             <Button href="#portfolio" variant="secondary" className="w-full sm:w-auto">

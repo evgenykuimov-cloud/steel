@@ -35,7 +35,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
         <a
           className="mt-3 text-sm font-bold text-steelblue transition hover:text-ink-950"
-          href={`#lead-form?product=${product.id}`}
+          href="/#lead-form"
         >
           Оставить заявку
         </a>

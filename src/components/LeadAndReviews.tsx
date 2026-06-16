@@ -45,7 +45,7 @@ export function LeadAndReviews() {
   };
 
   return (
-    <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+    <section id="lead-form" className="scroll-mt-28 bg-white px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl items-start gap-7 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="lead-panel h-full overflow-hidden rounded-[24px] bg-ink-950 p-6 text-white shadow-dark md:p-8">
           <div className="max-w-md">
@@ -57,7 +57,7 @@ export function LeadAndReviews() {
             </p>
           </div>
 
-          <form id="lead-form" className="mt-7 grid gap-3" onSubmit={handleSubmit}>
+          <form className="mt-7 grid gap-3" onSubmit={handleSubmit}>
             <div className="grid gap-3 sm:grid-cols-2">
               <label className="sr-only" htmlFor="lead-name">
                 Ваше имя

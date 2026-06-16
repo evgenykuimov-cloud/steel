@@ -42,7 +42,7 @@ export function Header() {
             <span className="block whitespace-nowrap text-sm font-black">+7 (495) 150-42-10</span>
             <span className="block whitespace-nowrap text-xs text-white/64">Ежедневно с 9:00 до 20:00</span>
           </a>
-          <Button href="#lead-form" className="min-h-10 px-4 py-2 text-xs">
+          <Button href="/#lead-form" className="min-h-10 px-4 py-2 text-xs">
             Оставить заявку
           </Button>
           <div className="flex gap-2">
@@ -91,7 +91,7 @@ export function Header() {
             <a className="font-black" href="tel:+74951504210">
               +7 (495) 150-42-10
             </a>
-            <Button href="#lead-form" onClick={() => setOpen(false)}>
+            <Button href="/#lead-form" onClick={() => setOpen(false)}>
               Оставить заявку
             </Button>
           </div>
