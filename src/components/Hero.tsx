@@ -18,21 +18,21 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-ink-950/45" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pb-16 pt-10 sm:px-6 md:grid-cols-[0.92fr_1.08fr] md:pb-24 lg:px-8">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-black uppercase leading-[0.98] tracking-normal sm:text-5xl lg:text-6xl">
+      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 pb-14 pt-10 sm:px-6 md:grid-cols-[0.92fr_1.08fr] md:gap-10 md:pb-24 lg:px-8">
+        <div className="min-w-0 max-w-2xl">
+          <h1 className="hero-title font-black uppercase tracking-normal">
             Надёжные
             <br />
             металлоконструкции
             <br />
             <span className="text-cta">под любые задачи</span>
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-7 text-white/82">
+          <p className="mt-6 max-w-xl text-[15px] leading-7 text-white/82 sm:text-base">
             Проектируем, изготавливаем и монтируем металлоконструкции любой сложности
             “под ключ” по Москве и Московской области
           </p>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-3">
+          <div className="mt-8 grid max-w-xl gap-3 sm:grid-cols-3">
             {advantages.map((item) => (
               <div key={item.title} className="flex items-center gap-3">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/8 text-cta">
@@ -43,16 +43,18 @@ export function Hero() {
             ))}
           </div>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button href="#lead-form">Рассчитать проект</Button>
-            <Button href="#portfolio" variant="secondary">
+          <div className="mt-9 flex max-w-xl flex-col gap-3 sm:flex-row">
+            <Button href="#lead-form" className="w-full sm:w-auto">
+              Рассчитать проект
+            </Button>
+            <Button href="#portfolio" variant="secondary" className="w-full sm:w-auto">
               Смотреть портфолио
             </Button>
           </div>
         </div>
 
-        <div className="relative min-h-[300px] md:min-h-[430px]">
-          <div className="hero-card absolute bottom-0 right-0 h-[88%] w-full rounded-[26px] border border-white/14 bg-white/8 shadow-dark backdrop-blur-[1px] md:hidden" />
+        <div className="relative min-h-[230px] sm:min-h-[300px] md:min-h-[430px]">
+          <div className="hero-card absolute inset-x-0 bottom-0 mx-auto h-full max-w-[560px] rounded-[24px] border border-white/14 bg-white/8 shadow-dark backdrop-blur-[1px] md:hidden" />
         </div>
       </div>
     </section>
