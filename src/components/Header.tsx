@@ -50,15 +50,19 @@ export function Header() {
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[#24D366] text-white transition hover:scale-105"
               href="https://wa.me/74951504210"
               aria-label="Написать в WhatsApp"
-            >
-              <Icon name="whatsapp" className="h-5 w-5" />
-            </a>
+            />
             <a
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[#28A8EA] text-white transition hover:scale-105"
               href="https://t.me/"
               aria-label="Написать в Telegram"
             >
-              <Icon name="telegram" className="h-5 w-5" />
+            </a>
+            <a
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#4B7BFF] text-[10px] font-black uppercase tracking-normal text-white transition hover:scale-105"
+              href="https://max.ru/"
+              aria-label="Написать в MAX"
+            >
+              max
             </a>
           </div>
         </div>
