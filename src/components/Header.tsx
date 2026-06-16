@@ -18,7 +18,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="absolute left-0 right-0 top-0 z-30 border-b border-white/10 bg-ink-950/35 text-white backdrop-blur-md">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-ink-950/82 text-white shadow-[0_12px_32px_rgba(6,21,35,0.28)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-4 sm:px-6 lg:gap-6 lg:px-8">
         <Link className="flex min-w-0 shrink-0 items-center gap-3" href="/" aria-label="На главную">
           <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-white">
