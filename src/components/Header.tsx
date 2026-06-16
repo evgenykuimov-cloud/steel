@@ -58,12 +58,10 @@ export function Header() {
             >
             </a>
             <a
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#4B7BFF] text-[10px] font-black uppercase tracking-normal text-white transition hover:scale-105"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#4B7BFF] text-white transition hover:scale-105"
               href="https://max.ru/"
               aria-label="Написать в MAX"
-            >
-              max
-            </a>
+            />
           </div>
         </div>
 

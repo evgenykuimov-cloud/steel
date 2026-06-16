@@ -24,12 +24,10 @@ export function Footer() {
             <a className="social-link bg-[#24D366]" href="https://wa.me/74951504210" aria-label="WhatsApp" />
             <a className="social-link bg-[#28A8EA]" href="https://t.me/" aria-label="Telegram" />
             <a
-              className="social-link bg-[#4B7BFF] text-[10px] font-black uppercase"
+              className="social-link bg-[#4B7BFF]"
               href="https://max.ru/"
               aria-label="MAX"
-            >
-              max
-            </a>
+            />
           </div>
         </div>
 
