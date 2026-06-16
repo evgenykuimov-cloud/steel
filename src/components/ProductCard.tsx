@@ -16,17 +16,19 @@ export function ProductCard({ product }: ProductCardProps) {
         aria-label={`Изображение изделия ${product.title}`}
       />
       <div className="flex flex-1 flex-col p-5">
-        <h3 className="text-lg font-black text-gray-950">{product.title}</h3>
-        <ul className="mt-3 space-y-1.5 text-sm leading-5 text-gray-600">
+        <h3 className="min-h-[52px] text-lg font-black leading-snug text-gray-950">
+          {product.title}
+        </h3>
+        <ul className="mt-3 min-h-[74px] space-y-1.5 text-sm leading-5 text-gray-600">
           {product.characteristics.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
-        <div className="mt-auto flex items-end justify-between gap-3 pt-5">
+        <div className="mt-auto pt-5">
           <p className="whitespace-nowrap text-lg font-black text-ink-950">{price}</p>
           <Button
             href={`/catalog/${product.slug}`}
-            className="min-h-9 rounded-lg px-4 py-2 text-xs"
+            className="mt-3 w-full min-h-9 rounded-lg px-4 py-2 text-xs"
           >
             Подробнее
           </Button>

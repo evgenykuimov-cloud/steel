@@ -46,8 +46,8 @@ export function LeadAndReviews() {
 
   return (
     <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-7 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="lead-panel overflow-hidden rounded-[24px] bg-ink-950 p-6 text-white shadow-dark md:p-8">
+      <div className="mx-auto grid max-w-7xl items-start gap-7 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="lead-panel h-full overflow-hidden rounded-[24px] bg-ink-950 p-6 text-white shadow-dark md:p-8">
           <div className="max-w-md">
             <h2 className="text-2xl font-black leading-tight md:text-3xl">
               Оставьте заявку на расчёт вашего проекта
@@ -131,9 +131,12 @@ export function LeadAndReviews() {
               Все отзывы →
             </a>
           </div>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid items-stretch gap-4 md:grid-cols-3">
             {reviews.map((review) => (
-              <article key={review.id} className="rounded-card border border-gray-200 bg-white p-5 shadow-card">
+              <article
+                key={review.id}
+                className="flex h-full min-h-[318px] flex-col rounded-card border border-gray-200 bg-white p-5 shadow-card"
+              >
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <h3 className="font-black text-gray-950">
@@ -145,9 +148,11 @@ export function LeadAndReviews() {
                     {"★".repeat(review.rating)}
                   </span>
                 </div>
-                <p className="mt-4 text-sm leading-6 text-gray-600">{review.text}</p>
+                <p className="mt-4 min-h-[120px] text-sm leading-6 text-gray-600">
+                  {review.text}
+                </p>
                 <div
-                  className={`mt-5 h-28 rounded-xl bg-cover bg-center ${review.imageClass}`}
+                  className={`mt-auto h-28 rounded-xl bg-cover bg-center ${review.imageClass}`}
                   role="img"
                   aria-label={`Фото объекта клиента ${review.name}`}
                 />
