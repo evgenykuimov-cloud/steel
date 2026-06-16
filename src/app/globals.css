@@ -191,7 +191,6 @@ textarea {
 
 /* Temporary industrial visuals. Replace these with real files in public/images when product photos are ready. */
 .bg-canopy,
-.bg-product-canopy,
 .bg-work-carport,
 .bg-review-canopy {
   background-image:
@@ -199,6 +198,14 @@ textarea {
     linear-gradient(22deg, transparent 0 53%, rgba(255, 255, 255, 0.65) 53.3% 54.4%, transparent 54.8%),
     linear-gradient(158deg, transparent 0 42%, rgba(7, 26, 44, 0.65) 42.4% 44%, transparent 44.4%),
     linear-gradient(90deg, #d9e2ea, #6f8291 48%, #1f3347);
+}
+
+.bg-product-canopy {
+  background-image:
+    linear-gradient(180deg, rgba(6, 21, 35, 0.04), rgba(6, 21, 35, 0.16)),
+    url("/images/products/canopy-2-cars.jpg");
+  background-position: 50% 46%;
+  background-size: cover;
 }
 
 .bg-gate,
