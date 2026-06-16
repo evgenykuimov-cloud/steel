@@ -19,8 +19,8 @@ export function Header() {
 
   return (
     <header className="absolute left-0 right-0 top-0 z-30 border-b border-white/10 bg-ink-950/35 text-white backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-4 sm:px-6 lg:px-8">
-        <Link className="flex min-w-0 items-center gap-3" href="/" aria-label="На главную">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-4 sm:px-6 lg:gap-6 lg:px-8">
+        <Link className="flex min-w-0 shrink-0 items-center gap-3" href="/" aria-label="На главную">
           <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-white">
             <Icon name="logo" className="h-8 w-8" />
           </span>
@@ -29,18 +29,18 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 text-sm font-semibold text-white/88 lg:flex">
+        <nav className="hidden flex-1 items-center justify-center gap-7 text-sm font-semibold text-white/88 lg:flex">
           {navItems.map((item) => (
-            <Link key={item.href} className="transition hover:text-cta" href={item.href}>
+            <Link key={item.href} className="whitespace-nowrap transition hover:text-cta" href={item.href}>
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 lg:flex">
-          <a className="text-right" href="tel:+74951504210">
-            <span className="block text-sm font-black">+7 (495) 150-42-10</span>
-            <span className="block text-xs text-white/64">Ежедневно с 9:00 до 20:00</span>
+        <div className="hidden shrink-0 items-center gap-4 lg:flex">
+          <a className="min-w-[150px] text-right" href="tel:+74951504210">
+            <span className="block whitespace-nowrap text-sm font-black">+7 (495) 150-42-10</span>
+            <span className="block whitespace-nowrap text-xs text-white/64">Ежедневно с 9:00 до 20:00</span>
           </a>
           <Button href="#lead-form" className="min-h-10 px-4 py-2 text-xs">
             Оставить заявку

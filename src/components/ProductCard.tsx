@@ -6,6 +6,8 @@ type ProductCardProps = {
 };
 
 export function ProductCard({ product }: ProductCardProps) {
+  const price = product.price.replace(/\s/g, "\u00A0");
+
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-card border border-gray-200 bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:shadow-xl">
       <div
@@ -21,7 +23,7 @@ export function ProductCard({ product }: ProductCardProps) {
           ))}
         </ul>
         <div className="mt-auto flex items-end justify-between gap-3 pt-5">
-          <p className="text-lg font-black text-ink-950">{product.price}</p>
+          <p className="whitespace-nowrap text-lg font-black text-ink-950">{price}</p>
           <Button
             href={`/catalog/${product.slug}`}
             className="min-h-9 rounded-lg px-4 py-2 text-xs"
