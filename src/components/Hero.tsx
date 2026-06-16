@@ -20,12 +20,26 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl gap-8 px-4 pb-14 pt-10 sm:px-6 md:grid-cols-[0.92fr_1.08fr] md:gap-10 md:pb-24 lg:px-8">
         <div className="min-w-0 max-w-2xl">
-          <h1 className="hero-title font-black uppercase tracking-normal">
-            Надёжные
-            <br />
-            металлоконструкции
-            <br />
-            <span className="text-cta">под любые задачи</span>
+          <h1
+            className="hero-title font-black uppercase tracking-normal"
+            aria-label="Надёжные металлоконструкции под любые задачи"
+          >
+            <span className="hidden sm:inline" aria-hidden="true">
+              Надёжные
+              <br />
+              металлоконструкции
+              <br />
+              <span className="text-cta">под любые задачи</span>
+            </span>
+            <span className="sm:hidden" aria-hidden="true">
+              Надёжные
+              <br />
+              металло-
+              <br />
+              конструкции
+              <br />
+              <span className="text-cta">под любые задачи</span>
+            </span>
           </h1>
           <p className="mt-6 max-w-xl text-[15px] leading-7 text-white/82 sm:text-base">
             Проектируем, изготавливаем и монтируем металлоконструкции любой сложности
