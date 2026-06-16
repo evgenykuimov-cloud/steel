@@ -9,17 +9,17 @@ const advantages = [
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-ink-950 pt-28 text-white md:pt-32">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_68%_20%,rgba(11,77,140,0.55),transparent_34%),linear-gradient(90deg,#061523_0%,rgba(6,21,35,0.94)_36%,rgba(6,21,35,0.55)_63%,rgba(6,21,35,0.85)_100%)]" />
+    <section className="relative isolate overflow-hidden bg-ink-950 pt-28 text-white md:pt-32">
       <div
-        className="hero-visual absolute inset-y-0 right-0 hidden w-[68%] bg-cover bg-center opacity-80 md:block"
+        className="hero-photo absolute inset-0"
         role="img"
         aria-label="Металлический навес с подсветкой и автомобилями"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-ink-950/45" />
+      <div className="hero-shade absolute inset-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/80 via-ink-950/10 to-ink-950/82" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 pb-14 pt-10 sm:px-6 md:grid-cols-[0.92fr_1.08fr] md:gap-10 md:pb-24 lg:px-8">
-        <div className="min-w-0 max-w-2xl">
+      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 pb-14 pt-10 sm:px-6 md:grid-cols-[0.92fr_1.08fr] md:gap-10 md:pb-24 lg:grid-cols-[minmax(0,850px)_1fr] lg:px-8">
+        <div className="min-w-0 max-w-[850px]">
           <h1
             className="hero-title font-black uppercase tracking-normal"
             aria-label="Надёжные металлоконструкции под любые задачи"
@@ -29,7 +29,7 @@ export function Hero() {
               <br />
               металлоконструкции
               <br />
-              <span className="text-cta">под любые задачи</span>
+              <span className="text-cta lg:whitespace-nowrap">под любые задачи</span>
             </span>
             <span className="sm:hidden" aria-hidden="true">
               Надёжные
@@ -68,7 +68,11 @@ export function Hero() {
         </div>
 
         <div className="relative min-h-[230px] sm:min-h-[300px] md:min-h-[430px]">
-          <div className="hero-card absolute inset-x-0 bottom-0 mx-auto h-full max-w-[560px] rounded-[24px] border border-white/14 bg-white/8 shadow-dark backdrop-blur-[1px] md:hidden" />
+          <div
+            className="hero-mobile-photo absolute inset-x-0 bottom-0 mx-auto h-full max-w-[560px] rounded-[24px] border border-white/18 shadow-dark md:hidden"
+            role="img"
+            aria-label="Навес для двух автомобилей вечером"
+          />
         </div>
       </div>
     </section>

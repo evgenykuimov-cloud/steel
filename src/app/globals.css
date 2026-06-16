@@ -130,17 +130,26 @@ textarea {
   overflow-wrap: normal;
 }
 
-.hero-visual,
-.hero-card {
+.hero-photo {
+  background-image: url("/images/hero-carport.jpg");
+  background-position: 58% center;
+  background-size: cover;
+  opacity: 0.48;
+  transform: scale(1.01);
+}
+
+.hero-shade {
   background:
-    linear-gradient(90deg, rgba(6, 21, 35, 0.22), rgba(6, 21, 35, 0.05)),
-    radial-gradient(circle at 72% 28%, rgba(255, 210, 31, 0.28), transparent 7%),
-    linear-gradient(165deg, transparent 0 24%, rgba(255, 255, 255, 0.16) 24.3% 25%, transparent 25.4% 100%),
-    linear-gradient(14deg, transparent 0 56%, rgba(255, 255, 255, 0.12) 56.2% 57%, transparent 57.2% 100%),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 1.2%, transparent 1.4% 16%, rgba(255, 255, 255, 0.16) 16.2% 17.4%, transparent 17.6% 42%, rgba(255, 255, 255, 0.15) 42.2% 43.5%, transparent 43.8% 100%),
-    radial-gradient(circle at 46% 70%, rgba(20, 25, 31, 0.95) 0 8%, transparent 8.5%),
-    radial-gradient(circle at 70% 72%, rgba(22, 27, 34, 0.95) 0 7%, transparent 7.5%),
-    linear-gradient(180deg, rgba(95, 119, 139, 0.9), rgba(23, 37, 53, 0.92) 46%, rgba(7, 26, 44, 0.95));
+    radial-gradient(circle at 70% 28%, rgba(255, 210, 31, 0.24), transparent 9%),
+    linear-gradient(90deg, #061523 0%, rgba(6, 21, 35, 0.98) 34%, rgba(6, 21, 35, 0.68) 58%, rgba(6, 21, 35, 0.18) 100%);
+}
+
+.hero-mobile-photo {
+  background-image:
+    linear-gradient(180deg, rgba(6, 21, 35, 0.04), rgba(6, 21, 35, 0.18)),
+    url("/images/hero-carport.jpg");
+  background-position: 62% center;
+  background-size: cover;
 }
 
 .lead-panel {
@@ -285,5 +294,10 @@ textarea {
 @media (min-width: 1024px) {
   .hero-title {
     font-size: 3.75rem;
+  }
+
+  .hero-photo {
+    background-position: 66% center;
+    opacity: 0.96;
   }
 }
