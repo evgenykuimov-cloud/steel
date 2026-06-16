@@ -16,7 +16,7 @@ export function Hero() {
         aria-label="Металлический навес с подсветкой и автомобилями"
       />
       <div className="hero-shade absolute inset-0" />
-      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/80 via-ink-950/10 to-ink-950/82" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/68 via-ink-950/5 to-ink-950/70" />
 
       <div className="relative mx-auto grid max-w-7xl gap-8 px-4 pb-14 pt-10 sm:px-6 md:grid-cols-[0.92fr_1.08fr] md:gap-10 md:pb-24 lg:grid-cols-[minmax(0,850px)_1fr] lg:px-8">
         <div className="min-w-0 max-w-[850px]">
