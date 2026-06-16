@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --ink: #061523;
+  --ink-2: #071a2c;
+  --ink-3: #0b1f35;
+  --cta: #ffd21f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fa;
+  color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.page-shell {
+  min-height: 72vh;
+  padding-top: 88px;
+  background: #f5f7fa;
+}
+
+.page-title {
+  max-width: 880px;
+  font-size: clamp(2.2rem, 5vw, 4.8rem);
+  font-weight: 900;
+  line-height: 0.98;
+  color: #111827;
+}
+
+.page-lead {
+  margin-top: 1.25rem;
+  max-width: 720px;
+  color: #4b5563;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.section-kicker {
+  margin-bottom: 0.9rem;
+  color: #0b4d8c;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.form-field {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.88rem 1rem;
+  color: #111827;
+  outline: none;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.form-field:focus {
+  border-color: var(--cta);
+  box-shadow: 0 0 0 3px rgba(255, 210, 31, 0.24);
+}
+
+.footer-title {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.footer-list {
+  display: grid;
+  gap: 0.65rem;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.footer-list a {
+  color: inherit;
+  transition: color 200ms ease;
+}
+
+.footer-list a:hover {
+  color: var(--cta);
+}
+
+.social-link {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: #ffffff;
+  transition: transform 200ms ease;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+}
+
+.hero-visual,
+.hero-card {
+  background:
+    linear-gradient(90deg, rgba(6, 21, 35, 0.22), rgba(6, 21, 35, 0.05)),
+    radial-gradient(circle at 72% 28%, rgba(255, 210, 31, 0.28), transparent 7%),
+    linear-gradient(165deg, transparent 0 24%, rgba(255, 255, 255, 0.16) 24.3% 25%, transparent 25.4% 100%),
+    linear-gradient(14deg, transparent 0 56%, rgba(255, 255, 255, 0.12) 56.2% 57%, transparent 57.2% 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 1.2%, transparent 1.4% 16%, rgba(255, 255, 255, 0.16) 16.2% 17.4%, transparent 17.6% 42%, rgba(255, 255, 255, 0.15) 42.2% 43.5%, transparent 43.8% 100%),
+    radial-gradient(circle at 46% 70%, rgba(20, 25, 31, 0.95) 0 8%, transparent 8.5%),
+    radial-gradient(circle at 70% 72%, rgba(22, 27, 34, 0.95) 0 7%, transparent 7.5%),
+    linear-gradient(180deg, rgba(95, 119, 139, 0.9), rgba(23, 37, 53, 0.92) 46%, rgba(7, 26, 44, 0.95));
+}
+
+.lead-panel {
+  position: relative;
+  isolation: isolate;
+}
+
+.lead-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 76% 28%, rgba(42, 137, 221, 0.45), transparent 22%),
+    linear-gradient(130deg, rgba(6, 21, 35, 0.98) 0 46%, rgba(8, 34, 61, 0.75) 46% 100%);
+}
+
+.lead-panel::after {
+  content: "";
+  position: absolute;
+  inset: auto -4rem -4rem auto;
+  z-index: -1;
+  width: 22rem;
+  height: 18rem;
+  background:
+    linear-gradient(135deg, transparent 0 42%, rgba(255, 255, 255, 0.13) 42.5% 45%, transparent 45.4%),
+    radial-gradient(circle at 50% 50%, rgba(255, 210, 31, 0.32), transparent 34%);
+  transform: rotate(-10deg);
+}
+
+/* Temporary industrial visuals. Replace these with real files in public/images when product photos are ready. */
+.bg-canopy,
+.bg-product-canopy,
+.bg-work-carport,
+.bg-review-canopy {
+  background-image:
+    linear-gradient(180deg, rgba(6, 21, 35, 0.05), rgba(6, 21, 35, 0.24)),
+    linear-gradient(22deg, transparent 0 53%, rgba(255, 255, 255, 0.65) 53.3% 54.4%, transparent 54.8%),
+    linear-gradient(158deg, transparent 0 42%, rgba(7, 26, 44, 0.65) 42.4% 44%, transparent 44.4%),
+    linear-gradient(90deg, #d9e2ea, #6f8291 48%, #1f3347);
+}
+
+.bg-gate,
+.bg-product-gate,
+.bg-work-gate {
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 2px, transparent 2px 26px),
+    linear-gradient(180deg, #aab8c4, #1b2837 62%, #101923);
+}
+
+.bg-stairs,
+.bg-product-stairs,
+.bg-work-stairs,
+.bg-review-stairs {
+  background-image:
+    linear-gradient(135deg, transparent 0 38%, rgba(255, 255, 255, 0.78) 38.4% 40%, transparent 40.4%),
+    repeating-linear-gradient(0deg, transparent 0 20px, rgba(6, 21, 35, 0.28) 21px 24px),
+    linear-gradient(120deg, #e8edf2, #8c9aa7 42%, #223244);
+}
+
+.bg-hangar,
+.bg-product-hangar,
+.bg-work-hangar,
+.bg-review-hangar {
+  background-image:
+    radial-gradient(ellipse at 50% 100%, rgba(6, 21, 35, 0.85) 0 36%, transparent 37%),
+    repeating-radial-gradient(ellipse at 50% 100%, rgba(255, 255, 255, 0.45) 0 2px, transparent 3px 18px),
+    linear-gradient(180deg, #cbd8e4, #425b72 54%, #071a2c);
+}
+
+.bg-beam,
+.bg-product-beam,
+.bg-work-beams {
+  background-image:
+    linear-gradient(24deg, transparent 0 45%, rgba(255, 255, 255, 0.65) 45.3% 46.4%, transparent 46.8%),
+    linear-gradient(154deg, transparent 0 38%, rgba(255, 255, 255, 0.55) 38.4% 39.5%, transparent 39.9%),
+    repeating-linear-gradient(90deg, rgba(6, 21, 35, 0.5) 0 4px, transparent 4px 34px),
+    linear-gradient(120deg, #dce5ed, #4d647a 48%, #0b1f35);
+}
+
+.bg-furniture {
+  background-image:
+    linear-gradient(90deg, rgba(6, 21, 35, 0.9) 0 8%, transparent 8.4% 91%, rgba(6, 21, 35, 0.9) 91.4%),
+    linear-gradient(180deg, transparent 0 62%, rgba(6, 21, 35, 0.82) 62.5% 70%, transparent 70.4%),
+    linear-gradient(135deg, #eef2f6, #93a3af 52%, #29394a);
+}
+
+.bg-work-hozblok {
+  background-image:
+    linear-gradient(90deg, rgba(6, 21, 35, 0.65), transparent 42%),
+    linear-gradient(160deg, transparent 0 38%, rgba(255, 255, 255, 0.55) 38.3% 39.6%, transparent 40%),
+    linear-gradient(110deg, #cfdadf, #6f8974 50%, #14283b);
+}
+
+.bg-work-wall {
+  background-image:
+    linear-gradient(164deg, transparent 0 42%, rgba(255, 255, 255, 0.6) 42.4% 44%, transparent 44.5%),
+    linear-gradient(90deg, #c9d3dc, #2c455c 56%, #071a2c);
+}
+
+.bg-work-rail {
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.78) 0 3px, transparent 3px 24px),
+    linear-gradient(180deg, #dce3ea, #7a8794 52%, #263544);
+}
+
+.bg-work-visor {
+  background-image:
+    linear-gradient(16deg, transparent 0 52%, rgba(255, 255, 255, 0.62) 52.3% 53.6%, transparent 54%),
+    linear-gradient(90deg, #e3e9ef, #6d7f8d 52%, #142131);
+}
+
+.bg-work-terrace {
+  background-image:
+    repeating-linear-gradient(90deg, rgba(6, 21, 35, 0.55) 0 3px, transparent 3px 32px),
+    linear-gradient(180deg, #d6e1e9, #7d8e8f 56%, #1d2d3a);
+}
+
+@media (max-width: 767px) {
+  .page-shell {
+    padding-top: 76px;
+  }
+
+  .page-title {
+    font-size: 2.35rem;
+  }
+}

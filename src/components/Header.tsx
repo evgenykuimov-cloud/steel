@@ -1,0 +1,102 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import { Button } from "./Button";
+import { Icon } from "./Icon";
+
+const navItems = [
+  { href: "/catalog", label: "Каталог" },
+  { href: "/services", label: "Услуги" },
+  { href: "/portfolio", label: "Портфолио" },
+  { href: "/about", label: "О компании" },
+  { href: "/reviews", label: "Отзывы" },
+  { href: "/contacts", label: "Контакты" }
+];
+
+export function Header() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="absolute left-0 right-0 top-0 z-30 border-b border-white/10 bg-ink-950/35 text-white backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-4 sm:px-6 lg:px-8">
+        <Link className="flex min-w-0 items-center gap-3" href="/" aria-label="На главную">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-white">
+            <Icon name="logo" className="h-8 w-8" />
+          </span>
+          <span className="max-w-[190px] text-sm font-black leading-tight md:text-base">
+            Сварочные работы и металлоконструкции
+          </span>
+        </Link>
+
+        <nav className="hidden items-center gap-8 text-sm font-semibold text-white/88 lg:flex">
+          {navItems.map((item) => (
+            <Link key={item.href} className="transition hover:text-cta" href={item.href}>
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="hidden items-center gap-4 lg:flex">
+          <a className="text-right" href="tel:+74951504210">
+            <span className="block text-sm font-black">+7 (495) 150-42-10</span>
+            <span className="block text-xs text-white/64">Ежедневно с 9:00 до 20:00</span>
+          </a>
+          <Button href="#lead-form" className="min-h-10 px-4 py-2 text-xs">
+            Оставить заявку
+          </Button>
+          <div className="flex gap-2">
+            <a
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#24D366] text-white transition hover:scale-105"
+              href="https://wa.me/74951504210"
+              aria-label="Написать в WhatsApp"
+            >
+              <Icon name="whatsapp" className="h-5 w-5" />
+            </a>
+            <a
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#28A8EA] text-white transition hover:scale-105"
+              href="https://t.me/"
+              aria-label="Написать в Telegram"
+            >
+              <Icon name="telegram" className="h-5 w-5" />
+            </a>
+          </div>
+        </div>
+
+        <button
+          className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/20 text-white lg:hidden"
+          type="button"
+          aria-label={open ? "Закрыть меню" : "Открыть меню"}
+          onClick={() => setOpen((value) => !value)}
+        >
+          <Icon name={open ? "close" : "menu"} className="h-6 w-6" />
+        </button>
+      </div>
+
+      {open ? (
+        <div className="border-t border-white/10 bg-ink-950 px-4 pb-5 pt-2 lg:hidden">
+          <nav className="mx-auto grid max-w-7xl gap-1 text-sm font-bold">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                className="rounded-xl px-3 py-3 text-white/90 transition hover:bg-white/8 hover:text-cta"
+                href={item.href}
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="mx-auto mt-4 flex max-w-7xl flex-col gap-3">
+            <a className="font-black" href="tel:+74951504210">
+              +7 (495) 150-42-10
+            </a>
+            <Button href="#lead-form" onClick={() => setOpen(false)}>
+              Оставить заявку
+            </Button>
+          </div>
+        </div>
+      ) : null}
+    </header>
+  );
+}
