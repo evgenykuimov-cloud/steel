@@ -18,8 +18,32 @@ export function Icon({ name, className = "h-6 w-6" }: IconProps) {
   switch (name) {
     case "logo":
       return (
-        <svg {...common} fill="currentColor" stroke="none">
-          <path d="M12 2 3.4 6.9v10.2L12 22l8.6-4.9V6.9L12 2Zm0 2.9 5.4 3.1-5.4 3.1L6.6 8 12 4.9Zm-6 5.3 4.8 2.8v5.9L6 16.1v-5.9Zm7.2 8.7V13l4.8-2.8v5.9l-4.8 2.8Z" />
+        <svg className={className} viewBox="0 0 120 100" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoSteelDark" x1="12" y1="16" x2="110" y2="74" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#E8EDF2" />
+              <stop offset="0.18" stopColor="#82919B" />
+              <stop offset="0.48" stopColor="#172A37" />
+              <stop offset="1" stopColor="#061523" />
+            </linearGradient>
+            <linearGradient id="logoSteelLight" x1="24" y1="66" x2="94" y2="38" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#061523" />
+              <stop offset="0.45" stopColor="#F6F8FA" />
+              <stop offset="1" stopColor="#314552" />
+            </linearGradient>
+            <linearGradient id="logoYellow" x1="18" y1="88" x2="102" y2="88" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#FFE05A" />
+              <stop offset="0.52" stopColor="#FFD21F" />
+              <stop offset="1" stopColor="#F2B900" />
+            </linearGradient>
+          </defs>
+          <path d="M12 31 60 6l48 25-12 9-36-18-36 18-12-9Z" fill="url(#logoSteelDark)" />
+          <path d="M24 46 60 27l36 19-10 8-26-13-26 13-10-8Z" fill="url(#logoSteelLight)" />
+          <path d="M24 46v36l-11 6V36l11 10Z" fill="url(#logoSteelDark)" />
+          <path d="M96 46v36l11 6V36L96 46Z" fill="url(#logoSteelDark)" />
+          <path d="M53 43h14v44l-7 6-7-6V43Z" fill="url(#logoSteelLight)" />
+          <path d="M18 91 60 72l42 19-42-8-42 8Z" fill="url(#logoYellow)" />
+          <path d="M24 46 60 64l36-18-10 8-26 13-26-13-10-8Z" fill="#F5F7FA" opacity="0.9" />
         </svg>
       );
     case "roof":

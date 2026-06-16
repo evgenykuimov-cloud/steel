@@ -21,8 +21,8 @@ export function Header() {
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#061523]/95 text-white shadow-[0_12px_32px_rgba(6,21,35,0.28)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-4 sm:px-6 lg:gap-6 lg:px-8">
         <Link className="flex min-w-0 shrink-0 items-center gap-3" href="/" aria-label="На главную">
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-white">
-            <Icon name="logo" className="h-8 w-8" />
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center">
+            <Icon name="logo" className="h-12 w-12" />
           </span>
           <span className="max-w-[190px] text-sm font-black leading-tight md:text-base">
             Сварочные работы и металлоконструкции

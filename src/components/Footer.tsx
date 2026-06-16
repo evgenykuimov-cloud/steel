@@ -10,8 +10,8 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.3fr_0.8fr_0.8fr_1fr_1.1fr]">
         <div>
           <Link className="flex items-center gap-3" href="/">
-            <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10">
-              <Icon name="logo" className="h-8 w-8" />
+            <span className="flex h-12 w-12 items-center justify-center">
+              <Icon name="logo" className="h-12 w-12" />
             </span>
             <span className="text-sm font-black leading-tight">
               Сварочные работы и металлоконструкции
