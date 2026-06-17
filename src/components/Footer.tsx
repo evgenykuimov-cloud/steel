@@ -9,12 +9,20 @@ export function Footer() {
     <footer className="bg-ink-950 px-4 py-12 text-white sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.3fr_0.8fr_0.8fr_1fr_1.1fr]">
         <div>
-          <Link className="flex items-center gap-3" href="/">
+          <Link
+            className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-black/80 p-3 shadow-[0_0_26px_rgba(255,255,255,0.10)]"
+            href="/"
+          >
             <span className="flex h-12 w-12 items-center justify-center">
-              <Icon name="logo" className="h-12 w-12" />
+              <Icon name="logo" className="h-12 w-12 drop-shadow-[0_0_10px_rgba(255,255,255,0.55)]" />
             </span>
-            <span className="text-sm font-black leading-tight">
-              Сварочные работы и металлоконструкции
+            <span className="grid max-w-[240px] leading-tight">
+              <span className="text-sm font-black text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.24)]">
+                Сварочные работы и металлоконструкции
+              </span>
+              <span className="mt-0.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white/66 drop-shadow-[0_0_7px_rgba(255,255,255,0.22)]">
+                Проектирование, изготовление, монтаж
+              </span>
             </span>
           </Link>
           <p className="mt-5 max-w-xs text-sm leading-6 text-white/66">

@@ -20,12 +20,21 @@ export function Header() {
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#061523]/95 text-white shadow-[0_12px_32px_rgba(6,21,35,0.28)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-4 sm:px-6 lg:gap-6 lg:px-8">
-        <Link className="flex min-w-0 shrink-0 items-center gap-3" href="/" aria-label="На главную">
-          <span className="flex h-12 w-12 shrink-0 items-center justify-center">
-            <Icon name="logo" className="h-12 w-12" />
+        <Link
+          className="flex min-w-0 shrink-0 items-center gap-3 rounded-2xl border border-white/10 bg-black/90 px-2.5 py-2 shadow-[0_0_26px_rgba(255,255,255,0.10)]"
+          href="/"
+          aria-label="На главную"
+        >
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center">
+            <Icon name="logo" className="h-11 w-11 drop-shadow-[0_0_10px_rgba(255,255,255,0.55)]" />
           </span>
-          <span className="max-w-[190px] text-sm font-black leading-tight md:text-base">
-            Сварочные работы и металлоконструкции
+          <span className="grid max-w-[165px] leading-tight sm:max-w-[220px]">
+            <span className="text-xs font-black text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.24)] sm:text-sm md:text-base">
+              Сварочные работы и металлоконструкции
+            </span>
+            <span className="mt-0.5 text-[8px] font-bold uppercase tracking-[0.08em] text-white/66 drop-shadow-[0_0_7px_rgba(255,255,255,0.22)] sm:text-[10px]">
+              Проектирование, изготовление, монтаж
+            </span>
           </span>
         </Link>
 
